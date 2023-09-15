@@ -3,13 +3,15 @@ import java.util.Scanner;
 public class Card {
 
 	private static int numberOfCards = 1;
+	
 	private int number;
 	private String color;
 	private String fill;	
 	private String type;
 	
+	
 	/**
-	 * Each card has four qualities: Number, Color, Fill, and Shape.
+	* Each card has four qualities: Number, Color, Fill, and Shape.
 	 * Number can only be 1, 2, or 3.
 	 * Color can only be red, green, or purple.
 	 * Fill can only be solid, striped, or empty.
@@ -153,7 +155,7 @@ public class Card {
 	* Takes in data type integer and returns true if the cards are all the same or all different.
 	*/
 	
-	public static boolean checkIfSet_Int (int cardOneNumber, int cardTwoNumber, int cardThreeNumber) {
+	private static boolean checkIfSet_Int (int cardOneNumber, int cardTwoNumber, int cardThreeNumber) {
 			
 		if(cardOneNumber == cardTwoNumber && cardTwoNumber == cardThreeNumber && cardOneNumber == cardThreeNumber){
 				
@@ -175,7 +177,7 @@ public class Card {
 	* Takes in data type string and returns true if the cards are all the same or all different.
 	*/
 		
-	public static boolean checkIfSet_String (String cardOneString, String cardTwoString, String cardThreeString) {
+	private static boolean checkIfSet_String (String cardOneString, String cardTwoString, String cardThreeString) {
 		
 		if( cardOneString.equals(cardTwoString)  &&  cardTwoString.equals(cardThreeString) ){
 				
