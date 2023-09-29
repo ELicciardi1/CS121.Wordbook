@@ -28,7 +28,7 @@ public class SetEvaluator {
 	
 		// Prints the result of the set checker.
 		
-		if ( Card.checkIfSet_All( completeDeck ) == true) {
+		if ( Card.checkIfSet_All( completeDeck ) ) {
 			
 			System.out.println("The specified cards form a set");
 			

@@ -95,7 +95,7 @@ public class Card {
 				
 				int number = scanner.nextInt();
 				
-				if( checkInputInt(number, upper, lower) == true ) {
+				if( checkInputInt(number, upper, lower) ) {
 					
 					
 					return number;
@@ -117,7 +117,7 @@ public class Card {
 	* Returns a String when it matches one of the options.
 	*/
 	
-	private String promptUserString (Scanner scanner, String cardQuality, String option1,String option2,String option3) {
+	private String promptUserString (Scanner scanner, String cardQuality, String option1, String option2, String option3) {
 
 		while (true) {
 			
@@ -125,7 +125,8 @@ public class Card {
 			
 				String userInput = scanner.next();
 				
-				if( checkInputString(userInput, option1, option2, option3) == true ) {
+				
+				if( checkInputString(userInput, option1, option2, option3) ) {
 					
 					return userInput;
 					
@@ -141,6 +142,7 @@ public class Card {
 					
 			
 		}
+		
 	}
 	
 	/**
