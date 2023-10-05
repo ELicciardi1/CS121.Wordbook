@@ -10,7 +10,9 @@ public class PascalsTriangle {
 		
 	Scanner scanner = new Scanner(System.in);
 	
+	
 	pascalsTriangle(scanner);
+			
 	
 	scanner.close();
 	
@@ -21,23 +23,30 @@ public class PascalsTriangle {
 	
 	
 	
-	public static void pascalsTriangle(Scanner scanner) {
+	public static int pascalsTriangle(Scanner scanner) {
 		
 		System.out.println("Enter the number of layers:");
 		
 		int layers = scanner.nextInt();
 		
 		if (layers == 0) {
-			
+			return 1;
 		} else if (layers == 1) {
 			System.out.print(1);
+			return 1;
+		} else if (layers == 2) {
+			System.out.println(" "+1);
+			System.out.println(1+" "+1);
+			return 1;
 		} else {
 		
 		int[][] pyramid = new int[layers][layers];
 		
 		
 		
+		
 		printPyramid(pyramid);
+		return 0;
 		
 		} 
 		
