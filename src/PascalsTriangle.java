@@ -7,32 +7,42 @@ public class PascalsTriangle {
 	
 	public static void main(String[] args) {
 		
-	Scanner scanner = new Scanner(System.in);
-	System.out.println("Enter the number of layers:");
-	int layers = scanner.nextInt();
-	
-	if (layers == 0) {
 		
-	} else if (layers == 1) {
-		System.out.print(1);
-	} else {
+	Scanner scanner = new Scanner(System.in);
 	
-	int[][] pyramid = new int[layers][layers];
+	pascalsTriangle(scanner);
 	
-	
-	setPyramid(pyramid);
-	
-	printPyramid(pyramid);
-	
-	} 
 	scanner.close();
 	
-	
-	
-
 		
+	
 	}
 
+	
+	
+	
+	public static void pascalsTriangle(Scanner scanner) {
+		
+		System.out.println("Enter the number of layers:");
+		
+		int layers = scanner.nextInt();
+		
+		if (layers == 0) {
+			
+		} else if (layers == 1) {
+			System.out.print(1);
+		} else {
+		
+		int[][] pyramid = new int[layers][layers];
+		
+		
+		
+		printPyramid(pyramid);
+		
+		} 
+		
+	}
+	
 	public static void initializeToOne (int[][] pyramid) {
 		
 		for (int i = 0 ; i < pyramid.length ; i++) {
@@ -48,6 +58,8 @@ public class PascalsTriangle {
 	}
 	
 	public static void printPyramid (int[][] pyramid) {
+		
+			setPyramid(pyramid);
 			
 			int cellWidth = getCellWidth(pyramid);
 			int cellValue;
@@ -102,7 +114,7 @@ public class PascalsTriangle {
 			
 		}
 	
-	public static int getCellWidth (int[][] pyramid) {
+	public static int  getCellWidth (int[][] pyramid) {
 		
 		int highestValue = 0;
 		
@@ -168,4 +180,5 @@ public class PascalsTriangle {
 		System.out.print(cellValue);
 		
 	}
+
 }
